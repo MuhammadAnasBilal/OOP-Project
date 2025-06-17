@@ -1,0 +1,1291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1350</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Smart Traffic Management System v1.0</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_central">
+    <item>
+     <widget class="QTabWidget" name="mainTabWidget_ui">
+      <property name="currentIndex">
+       <number>4</number>
+      </property>
+      <widget class="QWidget" name="systemControlTab_ui">
+       <attribute name="title">
+        <string>System Control</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_sysCtrl">
+        <item>
+         <widget class="QGroupBox" name="sysctrl_systemGroupBox">
+          <property name="title">
+           <string>System Control</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_sysCtrlButtons">
+           <item>
+            <widget class="QPushButton" name="sysctrl_startSystemBtn">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string>background-color: green; color: white;</string>
+             </property>
+             <property name="text">
+              <string>Start System Task</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="sysctrl_stopSystemBtn">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string>background-color: red; color: white;</string>
+             </property>
+             <property name="text">
+              <string>Stop System Task</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_sysCtrl">
+             <property name="orientation">
+              <enum>Qt::Orientation::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="sysctrl_cameraGroupBox">
+          <property name="title">
+           <string>Camera Configuration</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_cameras">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_cam1">
+             <property name="text">
+              <string>Road 1 Camera:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="sysctrl_camera1Edit">
+             <property name="placeholderText">
+              <string>Index, IP, or File Path</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QPushButton" name="sysctrl_connectCamera1Btn">
+             <property name="text">
+              <string>Connect</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QPushButton" name="sysctrl_disconnectCamera1Btn">
+             <property name="text">
+              <string>Disconnect</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_cam2">
+             <property name="text">
+              <string>Road 2 Camera:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="sysctrl_camera2Edit">
+             <property name="placeholderText">
+              <string>Index, IP, or File Path</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QPushButton" name="sysctrl_connectCamera2Btn">
+             <property name="text">
+              <string>Connect</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QPushButton" name="sysctrl_disconnectCamera2Btn">
+             <property name="text">
+              <string>Disconnect</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_cam3">
+             <property name="text">
+              <string>Road 3 Camera:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="sysctrl_camera3Edit">
+             <property name="placeholderText">
+              <string>Index, IP, or File Path</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QPushButton" name="sysctrl_connectCamera3Btn">
+             <property name="text">
+              <string>Connect</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="3">
+            <widget class="QPushButton" name="sysctrl_disconnectCamera3Btn">
+             <property name="text">
+              <string>Disconnect</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_cam4">
+             <property name="text">
+              <string>Road 4 Camera:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLineEdit" name="sysctrl_camera4Edit">
+             <property name="placeholderText">
+              <string>Index, IP, or File Path</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2">
+            <widget class="QPushButton" name="sysctrl_connectCamera4Btn">
+             <property name="text">
+              <string>Connect</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="3">
+            <widget class="QPushButton" name="sysctrl_disconnectCamera4Btn">
+             <property name="text">
+              <string>Disconnect</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="sysctrl_arduinoGroupBox">
+          <property name="title">
+           <string>Arduino Configuration</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_arduino">
+           <item>
+            <widget class="QLabel" name="label_arduinoPort">
+             <property name="text">
+              <string>Port:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="sysctrl_arduinoPortCombo"/>
+           </item>
+           <item>
+            <widget class="QPushButton" name="sysctrl_refreshPortsBtn">
+             <property name="text">
+              <string>Refresh Ports</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="sysctrl_simulationModeCheck">
+             <property name="text">
+              <string>Simulation Mode (No Arduino)</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_arduino">
+             <property name="orientation">
+              <enum>Qt::Orientation::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_sysCtrl">
+          <property name="orientation">
+           <enum>Qt::Orientation::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="trafficMonitorTab_ui">
+       <attribute name="title">
+        <string>Traffic Monitor</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_monitor">
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="monitor_road1GroupBox">
+          <property name="title">
+           <string>Road 1</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_monitor_road1">
+           <item>
+            <widget class="QLabel" name="monitor_cameraDisplay1">
+             <property name="minimumSize">
+              <size>
+               <width>320</width>
+               <height>240</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string>background-color: black; border: 1px solid gray;</string>
+             </property>
+             <property name="text">
+              <string>Feed Disconnected</string>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignmentFlag::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="monitor_vehicleCount1">
+             <property name="text">
+              <string>Vehicles: 0</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="monitor_density1">
+             <property name="text">
+              <string>Density: OFF</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="monitor_lightStatus1">
+             <property name="text">
+              <string>Light: OFF</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QGroupBox" name="monitor_road2GroupBox">
+          <property name="title">
+           <string>Road 2</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_monitor_road2">
+           <item>
+            <widget class="QLabel" name="monitor_cameraDisplay2">
+             <property name="minimumSize">
+              <size>
+               <width>320</width>
+               <height>240</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string>background-color: black; border: 1px solid gray;</string>
+             </property>
+             <property name="text">
+              <string>Feed Disconnected</string>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignmentFlag::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="monitor_vehicleCount2">
+             <property name="text">
+              <string>Vehicles: 0</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="monitor_density2">
+             <property name="text">
+              <string>Density: OFF</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="monitor_lightStatus2">
+             <property name="text">
+              <string>Light: OFF</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QGroupBox" name="monitor_road3GroupBox">
+          <property name="title">
+           <string>Road 3</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_monitor_road3">
+           <item>
+            <widget class="QLabel" name="monitor_cameraDisplay3">
+             <property name="minimumSize">
+              <size>
+               <width>320</width>
+               <height>240</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string>background-color: black; border: 1px solid gray;</string>
+             </property>
+             <property name="text">
+              <string>Feed Disconnected</string>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignmentFlag::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="monitor_vehicleCount3">
+             <property name="text">
+              <string>Vehicles: 0</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="monitor_density3">
+             <property name="text">
+              <string>Density: OFF</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="monitor_lightStatus3">
+             <property name="text">
+              <string>Light: OFF</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QGroupBox" name="monitor_road4GroupBox">
+          <property name="title">
+           <string>Road 4</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_monitor_road4">
+           <item>
+            <widget class="QLabel" name="monitor_cameraDisplay4">
+             <property name="minimumSize">
+              <size>
+               <width>320</width>
+               <height>240</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string>background-color: black; border: 1px solid gray;</string>
+             </property>
+             <property name="text">
+              <string>Feed Disconnected</string>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignmentFlag::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="monitor_vehicleCount4">
+             <property name="text">
+              <string>Vehicles: 0</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="monitor_density4">
+             <property name="text">
+              <string>Density: OFF</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="monitor_lightStatus4">
+             <property name="text">
+              <string>Light: OFF</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="trafficLightsTab_ui">
+       <attribute name="title">
+        <string>Traffic Lights</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_lightsPage">
+        <item alignment="Qt::AlignmentFlag::AlignHCenter">
+         <widget class="QLabel" name="lights_currentRoadLabel">
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Current Green Road: None</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QProgressBar" name="lights_lightTimerProgress">
+          <property name="value">
+           <number>0</number>
+          </property>
+          <property name="textVisible">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QGridLayout" name="gridLayout_lights">
+          <item row="0" column="0">
+           <widget class="QGroupBox" name="lights_road1GroupBox">
+            <property name="title">
+             <string>Road 1 Lights</string>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_lights1">
+             <item>
+              <widget class="QLabel" name="lights_light1Red">
+               <property name="minimumSize">
+                <size>
+                 <width>50</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string>background-color: red; border-radius: 25px;</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="lights_light1Yellow">
+               <property name="minimumSize">
+                <size>
+                 <width>50</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string>background-color: yellow; border-radius: 25px;</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="lights_light1Green">
+               <property name="minimumSize">
+                <size>
+                 <width>50</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string>background-color: green; border-radius: 25px;</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QGroupBox" name="lights_road2GroupBox">
+            <property name="title">
+             <string>Road 2 Lights</string>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_lights2">
+             <item>
+              <widget class="QLabel" name="lights_light2Red">
+               <property name="minimumSize">
+                <size>
+                 <width>50</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string>background-color: red; border-radius: 25px;</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="lights_light2Yellow">
+               <property name="minimumSize">
+                <size>
+                 <width>50</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string>background-color: yellow; border-radius: 25px;</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="lights_light2Green">
+               <property name="minimumSize">
+                <size>
+                 <width>50</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string>background-color: green; border-radius: 25px;</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QGroupBox" name="lights_road3GroupBox">
+            <property name="title">
+             <string>Road 3 Lights</string>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_lights3">
+             <item>
+              <widget class="QLabel" name="lights_light3Red">
+               <property name="minimumSize">
+                <size>
+                 <width>50</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string>background-color: red; border-radius: 25px;</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="lights_light3Yellow">
+               <property name="minimumSize">
+                <size>
+                 <width>50</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string>background-color: yellow; border-radius: 25px;</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="lights_light3Green">
+               <property name="minimumSize">
+                <size>
+                 <width>50</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string>background-color: green; border-radius: 25px;</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QGroupBox" name="lights_road4GroupBox">
+            <property name="title">
+             <string>Road 4 Lights</string>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_lights4">
+             <item>
+              <widget class="QLabel" name="lights_light4Red">
+               <property name="minimumSize">
+                <size>
+                 <width>50</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string>background-color: red; border-radius: 25px;</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="lights_light4Yellow">
+               <property name="minimumSize">
+                <size>
+                 <width>50</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string>background-color: yellow; border-radius: 25px;</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="lights_light4Green">
+               <property name="minimumSize">
+                <size>
+                 <width>50</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string>background-color: green; border-radius: 25px;</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_lightsPage">
+          <property name="orientation">
+           <enum>Qt::Orientation::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="violationsTab_ui">
+       <attribute name="title">
+        <string>Violations</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_violations">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_violationsStats">
+          <item>
+           <widget class="QLabel" name="violations_totalViolationsLabel">
+            <property name="text">
+             <string>Total Violations (Session): 0</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_violations">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="violations_openFolderBtn">
+            <property name="text">
+             <string>Open Violations Folder</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="violations_clearTableBtn">
+            <property name="text">
+             <string>Clear Violations Table</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="violations_tableWidget">
+          <column>
+           <property name="text">
+            <string>Timestamp</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Road</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Reason</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Evidence Notes</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="settingsTab_ui">
+       <attribute name="title">
+        <string>Settings</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_settings">
+        <item>
+         <widget class="QGroupBox" name="settings_timingGroupBox">
+          <property name="title">
+           <string>Traffic Light Timing (in seconds)</string>
+          </property>
+          <layout class="QFormLayout" name="formLayout_timing">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_lowD">
+             <property name="text">
+              <string>Low Density Green Time:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QSpinBox" name="settings_lowDensityTimeSpin">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>120</number>
+             </property>
+             <property name="value">
+              <number>5</number>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_medD">
+             <property name="text">
+              <string>Medium Density Green Time:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QSpinBox" name="settings_mediumDensityTimeSpin">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>120</number>
+             </property>
+             <property name="value">
+              <number>10</number>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_highD">
+             <property name="text">
+              <string>High Density Green Time:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QSpinBox" name="settings_highDensityTimeSpin">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>120</number>
+             </property>
+             <property name="value">
+              <number>15</number>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_vHighD">
+             <property name="text">
+              <string>Very High Density Green Time:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QSpinBox" name="settings_veryHighDensityTimeSpin">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>120</number>
+             </property>
+             <property name="value">
+              <number>20</number>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_yellowL">
+             <property name="text">
+              <string>Yellow Light Duration:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QSpinBox" name="settings_yellowLightTimeSpin">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>10</number>
+             </property>
+             <property name="value">
+              <number>2</number>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="settings_behaviorGroupBox">
+          <property name="title">
+           <string>System Behavior</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_behavior">
+           <item>
+            <widget class="QCheckBox" name="settings_energySavingCheck">
+             <property name="text">
+              <string>Enable Energy Saving Mode (Lights OFF on no traffic)</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="settings_violationDetectionCheck">
+             <property name="text">
+              <string>Enable Red Light Violation Detection</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_2">
+          <property name="styleSheet">
+           <string notr="true">min-height: 70px;</string>
+          </property>
+          <property name="title">
+           <string>Thresholds</string>
+          </property>
+          <widget class="QDoubleSpinBox" name="settings_yoloConfidenceSpin">
+           <property name="geometry">
+            <rect>
+             <x>140</x>
+             <y>30</y>
+             <width>101</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">min-height:10px;</string>
+           </property>
+           <property name="decimals">
+            <number>2</number>
+           </property>
+           <property name="minimum">
+            <double>0.100000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>1.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.100000000000000</double>
+           </property>
+           <property name="value">
+            <double>0.500000000000000</double>
+           </property>
+          </widget>
+          <widget class="QDoubleSpinBox" name="settings_yoloNMSSpin">
+           <property name="geometry">
+            <rect>
+             <x>470</x>
+             <y>30</y>
+             <width>101</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">min-height:10px;</string>
+           </property>
+           <property name="decimals">
+            <number>2</number>
+           </property>
+           <property name="minimum">
+            <double>0.100000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>1.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.100000000000000</double>
+           </property>
+           <property name="value">
+            <double>0.400000000000000</double>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_yellowL_2">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>10</y>
+             <width>131</width>
+             <height>70</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Confidence Threshold:</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_yellowL_3">
+           <property name="geometry">
+            <rect>
+             <x>370</x>
+             <y>10</y>
+             <width>101</width>
+             <height>70</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>NMS Threshold:</string>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="settings_applyTrafficBtn">
+          <property name="styleSheet">
+           <string notr="true">min-height:20px;</string>
+          </property>
+          <property name="text">
+           <string>Apply Traffic Settings to System</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_settingsFileOps"/>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_settings">
+          <property name="orientation">
+           <enum>Qt::Orientation::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="logTab_ui">
+       <attribute name="title">
+        <string>Logs</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_log">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_logControls">
+          <item>
+           <widget class="QCheckBox" name="logs_autoScrollCheck">
+            <property name="text">
+             <string>Auto Scroll Log</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_log">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="logs_clearLogBtn">
+            <property name="text">
+             <string>Clear Log Display</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="logs_exportLogBtn">
+            <property name="text">
+             <string>Export Full Log</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="logs_logDisplay">
+          <property name="font">
+           <font/>
+          </property>
+          <property name="lineWrapMode">
+           <enum>QTextEdit::LineWrapMode::NoWrap</enum>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1350</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <widget class="QMenuBar" name="menubar_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1350</width>
+      <height>23</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <action name="actionLoadSettings">
+   <property name="text">
+    <string>&amp;Load Settings...</string>
+   </property>
+   <property name="toolTip">
+    <string>Load system and camera settings from a file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+L</string>
+   </property>
+  </action>
+  <action name="actionSaveSettings">
+   <property name="text">
+    <string>&amp;Save Settings As...</string>
+   </property>
+   <property name="toolTip">
+    <string>Save current system and camera settings to a file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionExportLogs">
+   <property name="text">
+    <string>&amp;Export System Logs...</string>
+   </property>
+   <property name="toolTip">
+    <string>Export the current system logs to a text file</string>
+   </property>
+  </action>
+  <action name="actionOpenViolationsFolder">
+   <property name="text">
+    <string>Open &amp;Violations Folder</string>
+   </property>
+   <property name="toolTip">
+    <string>Open the folder where violation images are stored</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>E&amp;xit</string>
+   </property>
+   <property name="toolTip">
+    <string>Exit the application</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionStartSystem">
+   <property name="text">
+    <string>S&amp;tart System</string>
+   </property>
+   <property name="toolTip">
+    <string>Start the traffic management system processing</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="actionStopSystem">
+   <property name="text">
+    <string>St&amp;op System</string>
+   </property>
+   <property name="toolTip">
+    <string>Stop the traffic management system processing</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+T</string>
+   </property>
+  </action>
+  <action name="actionRefreshCameras">
+   <property name="text">
+    <string>Re&amp;fresh Cameras</string>
+   </property>
+   <property name="toolTip">
+    <string>Refresh camera connection statuses</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>&amp;About Smart Traffic System</string>
+   </property>
+   <property name="toolTip">
+    <string>Show information about this application</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionExit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>674</x>
+     <y>449</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
