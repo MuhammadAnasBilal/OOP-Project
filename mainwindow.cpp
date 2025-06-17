@@ -15,7 +15,6 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     this->setWindowTitle("ㅤㅤSmart Traffic Management System");
-
     if (!trafficSystem->initializeSystem()) {
         QMessageBox::critical(this, "System Initialization Failed",
                               "The traffic system backend failed to initialize. "

@@ -12,14 +12,14 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
 
 
-    a.setWindowIcon(QIcon("C:\\Users\\Muhammad Anas Bilal\\Desktop\\STMS-STMS\\App_Logo.png"));
+    a.setWindowIcon(QIcon("C:\\Users\\Muhammad Anas Bilal\\Desktop\\STMS\\Images\\App_Logo.png"));
 
     // Create a pixmap for the splash screen
     QPixmap splashImage(800, 600);
     splashImage.fill(QColor("#2c3e50")); // Dark blue background
 
     // Load the logo from the local file system
-    QPixmap logo("C:\\Users\\Muhammad Anas Bilal\\Desktop\\STMS-STMS\\Air_Logo.png");
+    QPixmap logo("C:\\Users\\Muhammad Anas Bilal\\Desktop\\STMS\\Images\\Air_Logo.png");
 
     QPainter painter(&splashImage);
     painter.setRenderHint(QPainter::SmoothPixmapTransform);
